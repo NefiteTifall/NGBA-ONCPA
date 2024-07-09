@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class SpawnPoint : MonoBehaviour
 {
     private Transform spawnPoint;
 
