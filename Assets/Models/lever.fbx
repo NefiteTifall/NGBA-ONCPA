@@ -12,10 +12,10 @@ FBXHeaderExtension:  {
 		Year: 2024
 		Month: 7
 		Day: 10
-		Hour: 13
-		Minute: 51
-		Second: 21
-		Millisecond: 657
+		Hour: 14
+		Minute: 2
+		Second: 5
+		Millisecond: 715
 	}
 	Creator: "Blockbench 4.10.4"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -49,7 +49,7 @@ FBXHeaderExtension:  {
 	}
 }
 FileId: "iVFoobar"
-CreationTime: "2024-07-10 11:51:21:657"
+CreationTime: "2024-07-10 12:02:05:715"
 Creator: ""
 GlobalSettings:  {
 	Version: 1000
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 974030548 {
+	Document: 2145504260 {
 		Scene: "Scene"
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
@@ -98,12 +98,12 @@ References:
 
 Definitions:  {
 	Version: 100
-	Count: 18
+	Count: 12
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
 	ObjectType: "Model" {
-		Count: 6
+		Count: 3
 		PropertyTemplate: "FbxNode" {
 			Properties70:  {
 				P: "QuaternionInterpolate", "enum", "", "",0
@@ -181,7 +181,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Geometry" {
-		Count: 5
+		Count: 2
 		PropertyTemplate: "FbxMesh" {
 			Properties70:  {
 				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
@@ -268,9 +268,9 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 10148559, "Geometry::cube_1", "Mesh" {
+	Geometry: 25245636, "Geometry::cube_1", "Mesh" {
 		Vertices: *24 {
-			a: 18.75,6.25,18.75,18.75,6.25,-18.75,18.75,-6.25,18.75,18.75,-6.25,-18.75,-18.75,6.25,-18.75,-18.75,6.25,18.75,-18.75,-6.25,-18.75,-18.75,-6.25,18.75
+			a: 6.25,62.5,6.249999999999998,6.25,62.5,-6.25,6.25,0,6.249999999999998,6.25,0,-6.25,-6.25,62.5,-6.25,-6.25,62.5,6.249999999999998,-6.25,0,-6.25,-6.25,0,6.249999999999998
 		}
 		PolygonVertexIndex: *24 {
 			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
@@ -291,7 +291,7 @@ Objects:  {
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "Direct"
 			UV: *48 {
-				a: 0.5625,0,0.9375,0,0.9375,0.125,0.5625,0.125,0.3125,0,0.6875,0,0.6875,0.125,0.3125,0.125,0.5625,0,0.9375,0,0.9375,0.125,0.5625,0.125,0.3125,0,0.6875,0,0.6875,0.125,0.3125,0.125,0.5625,0.3125,0.9375,0.3125,0.9375,0.6875,0.5625,0.6875,0.5625,0.3125,0.9375,0.3125,0.9375,0.6875,0.5625,0.6875
+				a: 0.4375,0,0.5625,0,0.5625,0.625,0.4375,0.625,0.4375,0,0.5625,0,0.5625,0.625,0.4375,0.625,0.4375,0,0.5625,0,0.5625,0.625,0.4375,0.625,0.4375,0,0.5625,0,0.5625,0.625,0.4375,0.625,0.4375,0.5,0.5625,0.5,0.5625,0.625,0.4375,0.625,0.4375,0.5,0.5625,0.5,0.5625,0.625,0.4375,0.625
 			}
 		}
 		LayerElementMaterial: 0 {
@@ -319,9 +319,9 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 17886819, "Geometry::cube_3", "Mesh" {
+	Geometry: 55547187, "Geometry::cube", "Mesh" {
 		Vertices: *24 {
-			a: 18.75,6.25,18.750000000000004,18.75,6.25,-18.749999999999996,18.75,-6.25,18.750000000000004,18.75,-6.25,-18.749999999999996,-18.75,6.25,-18.749999999999996,-18.75,6.25,18.750000000000004,-18.75,-6.25,-18.749999999999996,-18.75,-6.25,18.750000000000004
+			a: 68.75,18.75,75,68.75,18.75,25,68.75,0,75,68.75,0,25,31.25,18.75,25,31.25,18.75,75,31.25,0,25,31.25,0,75
 		}
 		PolygonVertexIndex: *24 {
 			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
@@ -342,7 +342,7 @@ Objects:  {
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "Direct"
 			UV: *48 {
-				a: 0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.5625,0,0.9375,0,0.9375,0.125,0.5625,0.125,0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.5625,0,0.9375,0,0.9375,0.125,0.5625,0.125,0.0625,0.0625,0.4375,0.0625,0.4375,0.4375,0.0625,0.4375,0.0625,0.0625,0.4375,0.0625,0.4375,0.4375,0.0625,0.4375
+				a: 0.3125,0.8125,0.6875,0.8125,0.6875,1,0.3125,1,0.25,0.8125,0.75,0.8125,0.75,1,0.25,1,0.3125,0.8125,0.6875,0.8125,0.6875,1,0.3125,1,0.25,0.8125,0.75,0.8125,0.75,1,0.25,1,0.3125,0.25,0.6875,0.25,0.6875,0.75,0.3125,0.75,0.3125,0.25,0.6875,0.25,0.6875,0.75,0.3125,0.75
 			}
 		}
 		LayerElementMaterial: 0 {
@@ -370,166 +370,13 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 67818247, "Geometry::brewing_stand_4", "Mesh" {
-		Vertices: *24 {
-			a: 15.625000000000002,37.5,3.125,15.625000000000002,37.5,-3.125,15.625000000000002,-37.5,3.125,15.625000000000002,-37.5,-3.125,-15.625000000000002,37.5,-3.125,-15.625000000000002,37.5,3.125,-15.625000000000002,-37.5,-3.125,-15.625000000000002,-37.5,3.125
-		}
-		PolygonVertexIndex: *24 {
-			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
-		}
-		GeometryVersion: 124
-		LayerElementNormal: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygon"
-			ReferenceInformationType: "Direct"
-			Normals: *18 {
-				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
-			}
-		}
-		LayerElementUV: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygonVertex"
-			ReferenceInformationType: "Direct"
-			UV: *48 {
-				a: 0.6875,0.125,0.3125,0.125,0.3125,0.875,0.6875,0.875,0.625,0.125,0.6875,0.125,0.6875,0.875,0.625,0.875,0.3125,0.125,0.6875,0.125,0.6875,0.875,0.3125,0.875,0.3125,0.125,0.375,0.125,0.375,0.875,0.3125,0.875,0.3125,0.8125,0.6875,0.8125,0.6875,0.875,0.3125,0.875,0.3125,0.125,0.6875,0.125,0.6875,0.1875,0.3125,0.1875
-			}
-		}
-		LayerElementMaterial: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "AllSame"
-			ReferenceInformationType: "IndexToDirect"
-			Materials: *1 {
-				a: 0
-			}
-		}
-		Layer: 0 {
-			Version: 100
-			LayerElement:  {
-				Type: "LayerElementNormal"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementMaterial"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementUV"
-				TypedIndex: 0
-			}
-		}
-	}
-	Geometry: 90839745, "Geometry::cube", "Mesh" {
-		Vertices: *24 {
-			a: 6.25,43.75,6.25,6.25,43.75,-6.25,6.25,-43.75,6.25,6.25,-43.75,-6.25,-6.25,43.75,-6.25,-6.25,43.75,6.25,-6.25,-43.75,-6.25,-6.25,-43.75,6.25
-		}
-		PolygonVertexIndex: *24 {
-			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
-		}
-		GeometryVersion: 124
-		LayerElementNormal: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygon"
-			ReferenceInformationType: "Direct"
-			Normals: *18 {
-				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
-			}
-		}
-		LayerElementUV: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygonVertex"
-			ReferenceInformationType: "Direct"
-			UV: *48 {
-				a: 0.4375,0,0.5625,0,0.5625,0.875,0.4375,0.875,0.4375,0,0.5625,0,0.5625,0.875,0.4375,0.875,0.4375,0,0.5625,0,0.5625,0.875,0.4375,0.875,0.4375,0,0.5625,0,0.5625,0.875,0.4375,0.875,0.4375,0.4375,0.5625,0.4375,0.5625,0.5625,0.4375,0.5625,0.4375,0.4375,0.5625,0.4375,0.5625,0.5625,0.4375,0.5625
-			}
-		}
-		LayerElementMaterial: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "AllSame"
-			ReferenceInformationType: "IndexToDirect"
-			Materials: *1 {
-				a: 0
-			}
-		}
-		Layer: 0 {
-			Version: 100
-			LayerElement:  {
-				Type: "LayerElementNormal"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementMaterial"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementUV"
-				TypedIndex: 0
-			}
-		}
-	}
-	Geometry: 97541827, "Geometry::cube_2", "Mesh" {
-		Vertices: *24 {
-			a: 18.75,6.25,18.75,18.75,6.25,-18.75,18.75,-6.25,18.75,18.75,-6.25,-18.75,-18.75,6.25,-18.75,-18.75,6.25,18.75,-18.75,-6.25,-18.75,-18.75,-6.25,18.75
-		}
-		PolygonVertexIndex: *24 {
-			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
-		}
-		GeometryVersion: 124
-		LayerElementNormal: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygon"
-			ReferenceInformationType: "Direct"
-			Normals: *18 {
-				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
-			}
-		}
-		LayerElementUV: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "ByPolygonVertex"
-			ReferenceInformationType: "Direct"
-			UV: *48 {
-				a: 0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.0625,0,0.4375,0,0.4375,0.125,0.0625,0.125,0.0625,0.5625,0.4375,0.5625,0.4375,0.9375,0.0625,0.9375,0.0625,0.5625,0.4375,0.5625,0.4375,0.9375,0.0625,0.9375
-			}
-		}
-		LayerElementMaterial: 0 {
-			Version: 101
-			Name: ""
-			MappingInformationType: "AllSame"
-			ReferenceInformationType: "IndexToDirect"
-			Materials: *1 {
-				a: 0
-			}
-		}
-		Layer: 0 {
-			Version: 100
-			LayerElement:  {
-				Type: "LayerElementNormal"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementMaterial"
-				TypedIndex: 0
-			}
-			LayerElement:  {
-				Type: "LayerElementUV"
-				TypedIndex: 0
-			}
-		}
-	}
-	Model: 83146284, "Model::group", "Null" {
+	Model: 56605147, "Model::bone", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-4.986989235226168,-5,-0.013010764773832553
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-1.3877787807814457e-15,-2.7755575615628914e-15
 			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 			P: "RotationOrder", "enum", "", "",0
@@ -537,13 +384,13 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 44481173, "Model::cube", "Mesh" {
+	Model: 94115302, "Model::cube", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",4.986989235226168,23.75,0.013010764773832553
+			P: "Lcl Translation", "Lcl Translation", "", "A",-50,-18.861043456039805,-38.95145654396019
 			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 			P: "RotationOrder", "enum", "", "",0
@@ -552,67 +399,22 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 65753259, "Model::cube_1", "Mesh" {
+	Model: 58094348, "Model::cube_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",29.98698923522617,-13.75,0.013010764773832553
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-12.611043456039805,11.048543456039813
 			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-45,0,0
 			P: "RotationOrder", "enum", "", "",0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
 		}
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 47319011, "Model::cube_2", "Mesh" {
-		Version: 232
-		Properties70:  {
-			P: "RotationActive", "bool", "", "",1
-			P: "InheritType", "enum", "", "",1
-			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-20.01301076477383,-13.75,-24.98698923522617
-			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
-			P: "RotationOrder", "enum", "", "",0
-			P: "DefaultAttributeIndex", "int", "Integer", "",0
-		}
-		Shading: Y
-		Culling: "CullingOff"
-	}
-	Model: 40676443, "Model::cube_3", "Mesh" {
-		Version: 232
-		Properties70:  {
-			P: "RotationActive", "bool", "", "",1
-			P: "InheritType", "enum", "", "",1
-			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-20.01301076477383,-13.75,25.013010764773828
-			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
-			P: "RotationOrder", "enum", "", "",0
-			P: "DefaultAttributeIndex", "int", "Integer", "",0
-		}
-		Shading: Y
-		Culling: "CullingOff"
-	}
-	Model: 92927867, "Model::brewing_stand_4", "Mesh" {
-		Version: 232
-		Properties70:  {
-			P: "RotationActive", "bool", "", "",1
-			P: "InheritType", "enum", "", "",1
-			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",5.052043059095331,17.5,-0.05204305909533013
-			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,45,0
-			P: "RotationOrder", "enum", "", "",0
-			P: "DefaultAttributeIndex", "int", "Integer", "",0
-		}
-		Shading: Y
-		Culling: "CullingOff"
-	}
-	Material: 91809705, "Material::brewing_stand.png", "" {
+	Material: 48063685, "Material::cobblestone.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -623,28 +425,29 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 45149306, "Texture::brewing_stand.png", "" {
+	Texture: 94225915, "Texture::cobblestone.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::brewing_stand.png"
-		Media: "Video::brewing_stand.png"
-		FileName: "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand.png"
-		RelativeFilename: "brewing_stand.png"
+		TextureName: "Texture::cobblestone.png"
+		Media: "Video::cobblestone.png"
+		FileName: "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\cobblestone.png"
+		RelativeFilename: "cobblestone.png"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 67446702, "Video::brewing_stand.png", "Clip" {
+	Video: 33288151, "Video::cobblestone.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand.png"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\cobblestone.png"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand.png"
-		RelativeFilename: "brewing_stand.png"
+		Filename: "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\cobblestone.png"
+		RelativeFilename: "cobblestone.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAApJJREFUOE89UztPqkEUnAVfgKgIAU18FD4SKLQwxkAIMTbYoIkx0Fv4FwyFrYk/wZbeWFlY2EANxmAU5S2ISHyRqGhE1sy58Z7m+/bs7jlzZmbV7u6uvr+/R6fTwdraGr6+vnB5eYlmswmv1yvrXC6HWq2G5+dn9PX1wW63y57ZbIba39/X19fXCAaDMBqNyGazKJVKWFlZQT6fh8fjka9SChcXF/JdXl6Wogy1tbWlA4EAbm5u0N3dLcl0Oo1IJIKHhwc8PT1JrqenB+fn5xgYGBC0i4uLeHx8/FeABwjp9vYWb29vuLu7g9vthsFgkAuvr6+4urqSdSgUwunpqRTlmOrg4EAPDQ3h8PBQkn8xPDwMl8slXYlsc3NTLrA4o1KpwGq1Qh0dHelkMomPjw/4/X5BYLFYcHx8LP8sxHGKxSLK5TLYjIhIJtdqZ2dHEBAiuSDbn5+f6OrqQrVa/Y9ofHxcxvn+/obJZAKbttttqGg0qknKz8+PcNBqtaC1FokWFhYwMTEhBJN1Ejk4OCiduS8ykkRK+BeZTEYOr6+vo9FoiOYMeoX5+fl54YLSs6kUIDzOROiEmUgk4HQ60d/fj6WlJSnAHIudnZ3B4XCIb8QHGxsbmjPNzc0JkWSdxDF6e3ul28zMjKy5Z7PZsLq6KmuiUOFwWJP19/d3IY5I6DR2p/NYoFAoyEUGfUCrc5/WlhEoH9klmfF4HNPT05idnRWnjY2NSf7k5EQKEDrtzmAhFYvFNDvX63V5OGSY35eXF+GBnFBm5miikZERyVEtSq+2t7c1u/EwHw1H4UiUkuahfcn21NSUuI/SUR0GJVV7e3s6lUrJAXaiEqzMmTna36sjgaOjo/D5fOIHjjQ5OYlf/G11zUZCRj0AAAAASUVORK5CYII="
 	}
-	Material: 1940953, "Material::brewing_stand_base.png", "" {
+	Material: 12745148, "Material::lever.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -655,26 +458,27 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 99697689, "Texture::brewing_stand_base.png", "" {
+	Texture: 93643886, "Texture::lever.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::brewing_stand_base.png"
-		Media: "Video::brewing_stand_base.png"
-		FileName: "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand_base.png"
-		RelativeFilename: "brewing_stand_base.png"
+		TextureName: "Texture::lever.png"
+		Media: "Video::lever.png"
+		FileName: "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\lever.png"
+		RelativeFilename: "lever.png"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 32370006, "Video::brewing_stand_base.png", "Clip" {
+	Video: 37853416, "Video::lever.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand_base.png"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\lever.png"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\Nicolas\Documents\minecraft\textures\block\brewing_stand_base.png"
-		RelativeFilename: "brewing_stand_base.png"
+		Filename: "C:\Users\Nicolas\Documents\Minecraft versions\1.8.9\minecraft\textures\blocks\lever.png"
+		RelativeFilename: "lever.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAHpJREFUOE9jZKAQMFKon2HUAAb8YVBbW/v/8+fPDBMmTMAZVngDsaGh4f+nT58Y+vr6yDOgJsnu/9tPXxmmrzlLvgEXbr9g2HL4FnkGpAcZ/r969zXDkYtPyDMgL9Li/7lrTwbQAKoEIkWxMLXU7f/FO68YZq2/gDMQAY1wRhHyp9BFAAAAAElFTkSuQmCC"
 	}
 }
 
@@ -682,26 +486,17 @@ Objects:  {
 ;------------------------------------------------------------------
 
 Connections:  {
-	C: "OO",83146284,0
-	C: "OO",44481173,83146284
-	C: "OO",90839745,44481173
-	C: "OO",91809705,44481173
-	C: "OO",65753259,83146284
-	C: "OO",10148559,65753259
-	C: "OO",1940953,65753259
-	C: "OO",47319011,83146284
-	C: "OO",97541827,47319011
-	C: "OO",1940953,47319011
-	C: "OO",40676443,83146284
-	C: "OO",17886819,40676443
-	C: "OO",1940953,40676443
-	C: "OO",92927867,83146284
-	C: "OO",67818247,92927867
-	C: "OO",91809705,92927867
-	C: "OP",45149306,91809705, "DiffuseColor"
-	C: "OO",67446702,45149306
-	C: "OP",99697689,1940953, "DiffuseColor"
-	C: "OO",32370006,99697689
+	C: "OO",56605147,0
+	C: "OO",94115302,56605147
+	C: "OO",55547187,94115302
+	C: "OO",48063685,94115302
+	C: "OO",58094348,56605147
+	C: "OO",25245636,58094348
+	C: "OO",12745148,58094348
+	C: "OP",94225915,48063685, "DiffuseColor"
+	C: "OO",33288151,94225915
+	C: "OP",93643886,12745148, "DiffuseColor"
+	C: "OO",37853416,93643886
 }
 
 ; Takes section

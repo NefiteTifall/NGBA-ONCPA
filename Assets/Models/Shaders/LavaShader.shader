@@ -39,6 +39,7 @@ Shader "Custom/LavaShader"
             v2f vert (appdata_t v)
             {
                 v2f o;
+                // Utiliser UnityObjectToClipPos pour le support VR
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 return o;
@@ -48,14 +49,14 @@ Shader "Custom/LavaShader"
             {
                 float2 uv = i.uv;
 
-                // Calculate the frame number based on time and speed
-                float totalFrames = _FrameCount * 2 - 2; // Forward and backward frame count
+                // Calculer le numéro de frame basé sur le temps et la vitesse
+                float totalFrames = _FrameCount * 2 - 2; // Nombre total de frames aller-retour
                 float time = frac(_Time.y * _Speed / totalFrames) * totalFrames;
 
-                // Convert continuous time to discrete frame number
-                int frameInt = floor(time + 0.5); // Round to nearest frame
+                // Convertir le temps continu en numéro de frame discret
+                int frameInt = floor(time + 0.5); // Arrondir à la frame la plus proche
 
-                // Ping-pong logic to reverse the direction
+                // Logique de ping-pong pour inverser la direction
                 float frame;
                 if (frameInt > _FrameCount - 1)
                 {
