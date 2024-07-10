@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
     private Vector3 startPosition;
+    private Vector3 startRotation;
 
     protected void Start()
     {
@@ -14,5 +15,6 @@ public class ObjectController : MonoBehaviour
     public void ResetObjectPosition()
     {
         transform.position = startPosition;
+        transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 }
