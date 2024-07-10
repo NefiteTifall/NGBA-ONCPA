@@ -20,7 +20,6 @@ public class HitboxPortalTrigger : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Test Start");
         isPortalActive = portalActivatedByDefault;
         UpdatePortalState();
     }
@@ -39,7 +38,6 @@ public class HitboxPortalTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HitboxPortalTrigger.OnTriggerEnter");
         if (isPortalActive && other.CompareTag("Player"))
         {
             startTimer = true;
