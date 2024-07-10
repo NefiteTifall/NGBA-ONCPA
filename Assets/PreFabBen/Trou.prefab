@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432389550514413964}
   - component: {fileID: 4633409623051459161}
+  - component: {fileID: 7108603292259758215}
   m_Layer: 0
   m_Name: HitBoxTPFade
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 1205657510448516052}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 1}
+  m_LocalPosition: {x: 0, y: -1.43, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -180,8 +181,23 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 1, z: 2.5}
-  m_Center: {x: 1.5, y: 0, z: 0.5}
+  m_Size: {x: 2.5, y: 2.889641, z: 2.5}
+  m_Center: {x: 1.5, y: 0.9448205, z: 0.5}
+--- !u!114 &7108603292259758215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205657510448516052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9590983a44fb4f9478cd0d925e5e9e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Scenes/Level 4
+  teleportDelay: 1
+  triggerElement: {fileID: 1205657510448516052}
 --- !u!1 &1583253413823703165
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,10 +259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9590983a44fb4f9478cd0d925e5e9e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationTime: 1
   sceneToLoad: Scenes/Level 4
-  triggerObject: {fileID: 1205657510448516052}
-  fadeImage: {fileID: 0}
+  teleportDelay: 1
+  triggerElement: {fileID: 1205657510448516052}
 --- !u!1 &1618828126000354096
 GameObject:
   m_ObjectHideFlags: 0

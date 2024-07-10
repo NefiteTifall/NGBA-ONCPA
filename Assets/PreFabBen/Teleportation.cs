@@ -1,63 +1,49 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;  // Nécessaire pour utiliser l'Image
-using System.Collections;  // Nécessaire pour utiliser IEnumerator
+using System.Collections; // Ajouter cette ligne pour résoudre l'erreur CS0246
 
 public class Teleportation : MonoBehaviour
 {
-    [Header("Portal Settings")]
-    public float activationTime = 1f;  // Temps avant la téléportation
-    public string sceneToLoad = "YourSceneName";  // Nom de la scène à charger
+    // Nom de la scène vers laquelle vous souhaitez téléporter le joueur
+    public string sceneToLoad;
+    // Temps d'attente avant la téléportation en secondes
+    public float teleportDelay = 1.0f;
+    // L'élément qui aura le trigger
+    public GameObject triggerElement;
 
-    [Header("Trigger Settings")]
-    public GameObject triggerObject;  // Référence à l'objet avec lequel le joueur doit interagir
-
-    [Header("Fade Settings")]
-    public Image fadeImage;  // Référence à l'image utilisée pour le fondu
-
-    private bool startTimer = false;
     private float timer;
+    private bool startTimer = false;
+
+    private void Start()
+    {
+    }
 
     void Update()
     {
         if (startTimer)
         {
             timer += Time.deltaTime;
-            if (timer >= activationTime)
+            if (timer >= teleportDelay)
             {
-                StartCoroutine(FadeAndTeleport());
-                startTimer = false;  // Désactive le timer après le déclenchement de la téléportation
+                TeleportAfterDelay();
             }
         }
     }
 
+    // Cette fonction est appelée lorsqu'un autre collider entre dans le trigger collider attaché à l'élément de déclenchement
     private void OnTriggerEnter(Collider other)
     {
+        // Vérifie si le joueur est entré dans le trigger
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered the trigger");
+            // Lance la coroutine de téléportation avec un délai
             startTimer = true;
-            timer = 0;  // Réinitialiser le timer chaque fois que le joueur entre dans le trigger
         }
     }
 
-    private IEnumerator FadeAndTeleport()
+    // Coroutine pour gérer le délai avant la téléportation
+    private void TeleportAfterDelay()
     {
-        // Commence le fondu au noir
-        float fadeDuration = 1f;
-        float currentTime = 0f;
-
-        while (currentTime < fadeDuration)
-        {
-            currentTime += Time.deltaTime;
-            float alpha = Mathf.Clamp01(currentTime / fadeDuration);
-            Color color = fadeImage.color;
-            color.a = alpha;
-            fadeImage.color = color;
-            yield return null;
-        }
-
-        // Change la scène après le fondu
         SceneManager.LoadScene(sceneToLoad);
     }
 }
