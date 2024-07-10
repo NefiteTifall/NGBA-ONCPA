@@ -1,22 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HitboxPortalTrigger : MonoBehaviour
+public class PortalController : MonoBehaviour
 {
     [Header("Portal Settings")]
     public bool portalActivatedByDefault = true;
     public float activationTime = 2.5f;
-    public string sceneToLoad = "Scenes/";  // Nom de la scène à charger
+    public string sceneToLoad = "Scenes/";  // Nom de la scï¿½ne ï¿½ charger
 
     [Header("Block Settings")]
-    public GameObject block;  // Référence au bloc à activer/désactiver
+    public GameObject block;  // Rï¿½fï¿½rence au bloc ï¿½ activer/dï¿½sactiver
 
     [Header("Teleportation Settings")]
-    public bool teleportationEnabled = true;  // Option pour activer/désactiver la téléportation
+    public bool teleportationEnabled = true;  // Option pour activer/dï¿½sactiver la tï¿½lï¿½portation
 
     private bool isPortalActive;
     private float timer;
-    private bool startTimer = false;
+
+    private bool isPlayerClose = false;
+
+    public bool IsPlayerClose => isPlayerClose;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class HitboxPortalTrigger : MonoBehaviour
 
     void Update()
     {
-        if (startTimer)
+        if (isPlayerClose && teleportationEnabled)
         {
             timer += Time.deltaTime;
             if (timer >= activationTime)
@@ -40,7 +43,7 @@ public class HitboxPortalTrigger : MonoBehaviour
     {
         if (isPortalActive && other.CompareTag("Player"))
         {
-            startTimer = true;
+            isPlayerClose = true;
         }
     }
 
@@ -49,7 +52,7 @@ public class HitboxPortalTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             timer = 0;
-            startTimer = false;
+            isPlayerClose = false;
         }
     }
 
