@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShovelController : MonoBehaviour
+public class ShovelController : ObjectController
 {
     public string gravelTag = "Gravel";
 
