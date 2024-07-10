@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2973503754716098684}
   - component: {fileID: 2511278696080471681}
   - component: {fileID: 3943196623093812989}
+  - component: {fileID: 2099351013138925407}
   m_Layer: 0
   m_Name: iron_shovel
   m_TagString: Object
@@ -229,6 +230,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8665d1436053c4c6190bf3f51c5ff6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2099351013138925407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709267868827321294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39fd83d46b444c329b8c797c8e974f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravelTag: Gravel
 --- !u!1 &8726027947362719886
 GameObject:
   m_ObjectHideFlags: 0
