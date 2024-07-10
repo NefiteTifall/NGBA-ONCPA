@@ -7,6 +7,7 @@ TagManager:
   - Anchor
   - Object
   - Gravel
+  - Totem
   layers:
   - Default
   - TransparentFX
