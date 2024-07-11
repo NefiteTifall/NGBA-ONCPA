@@ -16328,7 +16328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1418237441567619899, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482622855277693668, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
       propertyPath: grabInteractable
