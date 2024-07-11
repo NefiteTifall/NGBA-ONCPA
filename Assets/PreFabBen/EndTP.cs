@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections.Generic;
 
 public class EndTP : MonoBehaviour
 {
-    // Nom de la scène vers laquelle vous souhaitez téléporter le joueur
+    // Nom de la scï¿½ne vers laquelle vous souhaitez tï¿½lï¿½porter le joueur
     public string sceneToLoad;
-    // Temps d'attente avant la téléportation en secondes
+    // Temps d'attente avant la tï¿½lï¿½portation en secondes
     public float teleportDelay = 1.0f;
-    // L'élément qui aura le trigger
+    // L'ï¿½lï¿½ment qui aura le trigger
     public GameObject triggerElement;
+    // Liste des XR Socket Interactors
+    public List<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor> socketInteractors = new List<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
     // Activation du portail
     public bool isPortalActive = false;
 
@@ -18,9 +22,14 @@ public class EndTP : MonoBehaviour
     private void Start()
     {
         SetPortalActivation(isPortalActive);
+        foreach (var socket in socketInteractors)
+        {
+            socket.selectEntered.AddListener(OnSocketElementPlaced);
+            socket.selectExited.AddListener(OnSocketElementRemoved);
+        }
     }
 
-    void Update()
+    private void Update()
     {
         if (startTimer)
         {
@@ -32,33 +41,33 @@ public class EndTP : MonoBehaviour
         }
     }
 
-    // Cette fonction est appelée lorsqu'un autre collider entre dans le trigger collider attaché à l'élément de déclenchement
+    // Cette fonction est appelï¿½e lorsqu'un autre collider entre dans le trigger collider attachï¿½ ï¿½ l'ï¿½lï¿½ment de dï¿½clenchement
     private void OnTriggerEnter(Collider other)
     {
-        // Vérifie si le portail est activé et si le joueur est entré dans le trigger
+        // Vï¿½rifie si le portail est activï¿½ et si le joueur est entrï¿½ dans le trigger
         if (isPortalActive && other.CompareTag("Player"))
         {
-            // Lance la téléportation avec un délai
+            // Lance la tï¿½lï¿½portation avec un dï¿½lai
             startTimer = true;
         }
     }
 
-    // Méthode pour téléporter après un délai
+    // Mï¿½thode pour tï¿½lï¿½porter aprï¿½s un dï¿½lai
     private void TeleportAfterDelay()
     {
-        // Téléporte le joueur vers la nouvelle scène
+        // Tï¿½lï¿½porte le joueur vers la nouvelle scï¿½ne
         SceneManager.LoadScene(sceneToLoad);
     }
 
-    // Méthode pour activer ou désactiver le portail via une action extérieure
+    // Mï¿½thode pour activer ou dï¿½sactiver le portail via une action extï¿½rieure
     public void SetPortalActivation(bool activationStatus)
     {
         isPortalActive = activationStatus;
         if (triggerElement != null)
         {
-            triggerElement.SetActive(isPortalActive); // Activer ou désactiver le triggerElement
+            triggerElement.SetActive(isPortalActive); // Activer ou dï¿½sactiver le triggerElement
 
-            // Assurez-vous que le triggerElement a un collider et qu'il est marqué comme Trigger
+            // Assurez-vous que le triggerElement a un collider et qu'il est marquï¿½ comme Trigger
             Collider collider = triggerElement.GetComponent<Collider>();
             if (collider != null)
             {
@@ -69,5 +78,31 @@ public class EndTP : MonoBehaviour
                 Debug.LogError("Trigger element must have a Collider component.");
             }
         }
+    }
+
+    // Mï¿½thode appelï¿½e lorsqu'un ï¿½lï¿½ment est placï¿½ dans un socket
+    private void OnSocketElementPlaced(SelectEnterEventArgs args)
+    {
+        CheckAllSocketsFilled();
+    }
+
+    // Mï¿½thode appelï¿½e lorsqu'un ï¿½lï¿½ment est retirï¿½ d'un socket
+    private void OnSocketElementRemoved(SelectExitEventArgs args)
+    {
+        CheckAllSocketsFilled();
+    }
+
+    // Vï¿½rifie si tous les sockets contiennent des ï¿½lï¿½ments
+    private void CheckAllSocketsFilled()
+    {
+        foreach (var socket in socketInteractors)
+        {
+            if (!socket.hasSelection)
+            {
+                SetPortalActivation(false);
+                return;
+            }
+        }
+        SetPortalActivation(true);
     }
 }
