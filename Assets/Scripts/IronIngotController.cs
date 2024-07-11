@@ -5,28 +5,28 @@ public class IronIngotController : ObjectController
     public float distanceThreshold = 0.5f;
 
     public PortalController portalController;
-    public ObjectController flintController;
-
-    private void OnIngotHitFlint()
-    {
-        Debug.Log("OnIngotHitFlint - IsPlayerClose :" + portalController.IsPlayerClose);
-
-        if (portalController.IsPlayerClose)
-        {
-            portalController.ActivatePortal();
-        }
-    }
+    public ObjectController flintObjectController;
 
     void Update()
     {
-        if (this.IsGrabbed && flintController.IsGrabbed)
+        if (flintObjectController == null) return;
+
+        if (this.IsGrabbed && flintObjectController.IsGrabbed)
         {
-            float distance = Vector3.Distance(this.transform.position, flintController.gameObject.transform.position);
+            float distance = Vector3.Distance(this.transform.position, flintObjectController.gameObject.transform.position);
 
             if (distance <= distanceThreshold)
             {
                 OnIngotHitFlint();
             }
+        }
+    }
+
+    private void OnIngotHitFlint()
+    {
+        if (portalController.IsPlayerClose)
+        {
+            portalController.ActivatePortal();
         }
     }
 }

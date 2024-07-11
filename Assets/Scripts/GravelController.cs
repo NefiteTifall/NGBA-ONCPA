@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class GravelController : MonoBehaviour
 {
-    public GameObject dropObjectPrefab;
+    public ObjectController flintObjectController;
+    public IronIngotController ironIngotController;
     public int health = 3;
 
     public void OnShovelHit()
@@ -17,9 +18,10 @@ public class GravelController : MonoBehaviour
 
     private void DestroyBlock()
     {
-        if (dropObjectPrefab != null)
+        if (flintObjectController != null)
         {
-            Instantiate(dropObjectPrefab, transform.position, Quaternion.identity);
+            flintObjectController.transform.position = transform.position;
+            flintObjectController.gameObject.SetActive(true);
         }
 
         Destroy(gameObject);
