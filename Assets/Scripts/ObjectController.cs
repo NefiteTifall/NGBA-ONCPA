@@ -6,13 +6,15 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ObjectController : MonoBehaviour
 {
+    public bool isCanBePlacedInSocket = true;
+
     private Vector3 startPosition;
     private Vector3 startRotation;
     private XRGrabInteractable grabInteractable;
     private bool isGrabbed = false;
 
     public bool IsGrabbed => isGrabbed;
-    
+
     private void Awake() {
         grabInteractable = GetComponent<XRGrabInteractable>();
 
@@ -25,6 +27,7 @@ public class ObjectController : MonoBehaviour
     protected void Start()
     {
         startPosition = transform.position;
+        startRotation = transform.rotation.eulerAngles;
     }
 
     private void OnSelectEntered(SelectEnterEventArgs args)
@@ -39,7 +42,6 @@ public class ObjectController : MonoBehaviour
 
     public void ResetObjectPosition()
     {
-        transform.position = startPosition;
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.SetPositionAndRotation(startPosition, Quaternion.Euler(startRotation));
     }
 }
