@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TotemPosed : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
-    public GameObject rayon;
+    // Game Object to destroy
+    public GameObject objectToDestroy;
 
-    // Fonction que l'on peux appeler depuis un autre script
-    public void OnTotemPosed()
+    // Destroy the object
+    public void Destroy()
     {
-        Destroy(rayon);
+        Destroy(objectToDestroy);
     }
-
     // Start is called before the first frame update
     void Start()
     {

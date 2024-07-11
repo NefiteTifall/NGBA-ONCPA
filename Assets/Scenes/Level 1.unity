@@ -6383,6 +6383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 358010850595266910, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478899377408469438, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
       propertyPath: m_Name
       value: flint
