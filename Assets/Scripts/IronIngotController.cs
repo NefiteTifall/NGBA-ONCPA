@@ -2,25 +2,31 @@ using UnityEngine;
 
 public class IronIngotController : ObjectController
 {
+    public float distanceThreshold = 0.5f;
+
     public PortalController portalController;
     public ObjectController flintController;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnIngotHitFlint()
     {
-        Debug.Log("Iron ingot collision");
-        if (collision.gameObject == flintController.gameObject)
+        Debug.Log("OnIngotHitFlint - IsPlayerClose :" + portalController.IsPlayerClose);
+
+        if (portalController.IsPlayerClose)
         {
-            OnIngotHitFlint();
+            portalController.ActivatePortal();
         }
     }
 
-    private void OnIngotHitFlint()
+    void Update()
     {
-        Debug.Log("Iron ingot hit flint");
-        if (portalController.IsPlayerClose)
+        if (this.IsGrabbed && flintController.IsGrabbed)
         {
-            Debug.Log("Player is close to the portal");
-            portalController.ActivatePortal();
+            float distance = Vector3.Distance(this.transform.position, flintController.gameObject.transform.position);
+
+            if (distance <= distanceThreshold)
+            {
+                OnIngotHitFlint();
+            }
         }
     }
 }

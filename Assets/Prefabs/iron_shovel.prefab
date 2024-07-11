@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4189458561807356469}
   - component: {fileID: 2973503754716098684}
   - component: {fileID: 2511278696080471681}
-  - component: {fileID: 3943196623093812989}
   - component: {fileID: 2099351013138925407}
   m_Layer: 0
   m_Name: iron_shovel
@@ -218,18 +217,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &3943196623093812989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7709267868827321294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8665d1436053c4c6190bf3f51c5ff6fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2099351013138925407
 MonoBehaviour:
   m_ObjectHideFlags: 0

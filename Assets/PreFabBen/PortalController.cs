@@ -29,7 +29,7 @@ public class PortalController : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerClose && teleportationEnabled)
+        if (isPortalActive && isPlayerClose && teleportationEnabled)
         {
             timer += Time.deltaTime;
             if (timer >= activationTime)
@@ -41,7 +41,7 @@ public class PortalController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isPortalActive && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerClose = true;
         }

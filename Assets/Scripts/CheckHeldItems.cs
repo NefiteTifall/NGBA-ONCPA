@@ -17,7 +17,7 @@ public class CheckHeldItems : MonoBehaviour
         if (hasIronIngot && hasFlint)
         {
             // Activer le déclencheur pour allumer le portail
-            Debug.Log("Le joueur a les deux objets nécessaires.");
+            // Debug.Log("Le joueur a les deux objets nécessaires.");
         }
     }
 }
