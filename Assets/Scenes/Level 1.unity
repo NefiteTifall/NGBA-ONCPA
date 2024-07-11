@@ -16324,7 +16324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1418237441567619899, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482622855277693668, guid: 1ab9890d4ce6fba4fb7c05b804ce02c3, type: 3}
       propertyPath: grabInteractable
@@ -18358,6 +18358,10 @@ PrefabInstance:
     - target: {fileID: 968115597434253471, guid: 4689a9c0da10b714b84f13da8f03dd6c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119191795956277624, guid: 4689a9c0da10b714b84f13da8f03dd6c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3826760268571340705, guid: 4689a9c0da10b714b84f13da8f03dd6c, type: 3}
       propertyPath: m_Name
