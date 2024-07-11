@@ -14,5 +14,9 @@ public class ResetZoneController : MonoBehaviour
         {
             other.GetComponent<ObjectController>().ResetObjectPosition();
         }
+		else
+        {
+            Debug.Log("Tag non reconnu : " + other.tag);
+        }
     }
 }
