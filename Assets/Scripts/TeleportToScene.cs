@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class TeleportToScene : MonoBehaviour
 {
@@ -13,8 +12,7 @@ public class TeleportToScene : MonoBehaviour
         if (other.CompareTag("Object"))
         {
             // Chargez la nouvelle scène
-            StartCoroutine(LoadSceneAfterDelay());
+            SceneManager.LoadScene(sceneName);
         }
     }
-	
 }
