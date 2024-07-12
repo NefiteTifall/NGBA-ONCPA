@@ -8,9 +8,7 @@ public class ShovelController : ObjectController
     {
         if (collision.gameObject.CompareTag(gravelTag))
         {
-            GravelController gravel = collision.gameObject.GetComponent<GravelController>();
-
-            if (gravel != null)
+            if (collision.gameObject.TryGetComponent<GravelController>(out var gravel))
             {
                 gravel.OnShovelHit();
             }

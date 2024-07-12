@@ -5,48 +5,52 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CustomSocketInteractor : XRSocketInteractor
 {
-    public GameObject objectToPlace;
+    public GameObject? objectToPlace;
 
-    private ObjectController objectController;
     private bool isPlaced = false;
 
     public bool IsPlaced => isPlaced;
 
-    protected override void Start()
-    {
-        base.Start();
-
-        objectController = objectToPlace.GetComponent<ObjectController>();
-    }
-
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
         bool baseCanSelect = base.CanSelect(interactable);
-        bool hasSpecificComponent = interactable.transform.gameObject == objectToPlace;
 
-        return baseCanSelect && hasSpecificComponent && objectController.isCanBePlacedInSocket;
+        if (objectToPlace != null)
+        {
+            bool hasSpecificComponent = interactable.transform.gameObject == objectToPlace;
+
+            return baseCanSelect && hasSpecificComponent;
+        }
+
+        return baseCanSelect;
     }
 
     public override bool CanHover(IXRHoverInteractable interactable)
     {
         bool baseCanHover = base.CanHover(interactable);
-        bool hasSpecificComponent = interactable.transform.gameObject == objectToPlace;
 
-        return baseCanHover && hasSpecificComponent && objectController.isCanBePlacedInSocket;
+        if (objectToPlace != null)
+        {
+            bool hasSpecificComponent = interactable.transform.gameObject == objectToPlace;
+
+            return baseCanHover && hasSpecificComponent;
+        }
+
+        return baseCanHover;
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        base.OnSelectEntered(args);
+        isPlaced = true;
 
-        isPlaced = false;
+        base.OnSelectEntered(args);
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        base.OnSelectExited(args);
-
         isPlaced = false;
+
+        base.OnSelectExited(args);
     }
 
     public void DestroyObject()
@@ -55,5 +59,12 @@ public class CustomSocketInteractor : XRSocketInteractor
         {
             Destroy(objectToPlace);
         }
+
+        DisableSocket();
+    }
+
+    private void DisableSocket()
+    {
+        this.enabled = false;
     }
 }

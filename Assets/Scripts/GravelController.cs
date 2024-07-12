@@ -3,7 +3,6 @@ using UnityEngine;
 public class GravelController : MonoBehaviour
 {
     public ObjectController flintObjectController;
-    public IronIngotController ironIngotController;
     public int health = 3;
 
     public void OnShovelHit()

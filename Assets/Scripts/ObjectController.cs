@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ObjectController : MonoBehaviour
 {
-    public bool isCanBePlacedInSocket = true;
-
     private Vector3 startPosition;
     private Vector3 startRotation;
     private XRGrabInteractable grabInteractable;
