@@ -28637,6 +28637,10 @@ PrefabInstance:
       propertyPath: lavaWallCollider
       value: 
       objectReference: {fileID: 1351031960}
+    - target: {fileID: 1479957080402946205, guid: 043960904f704e7479cd3d507c705cfa, type: 3}
+      propertyPath: distanceThreshold
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
